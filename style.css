@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  background: white;
+  color: black;
+}
+
+.header {
+  text-align: center;
+  padding: 60px 20px 20px;
+  letter-spacing: 2px;
+}
+
+.sub {
+  font-size: 12px;
+  opacity: 0.6;
+  margin-top: 10px;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nav button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.nav button:hover {
+  opacity: 1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 40px;
+}
+
+.item {
+  text-decoration: none;
+  color: black;
+}
+
+.item img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.item:hover img {
+  transform: scale(1.03);
+}
+
+.title {
+  margin-top: 10px;
+  font-size: 13px;
+}
