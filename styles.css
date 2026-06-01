@@ -5,9 +5,10 @@ body {
   color: black;
 }
 
+/* HEADER */
 .header {
   text-align: center;
-  padding: 60px 20px 20px;
+  padding: 90px 20px 30px;
   letter-spacing: 2px;
 }
 
@@ -17,43 +18,59 @@ body {
   margin-top: 10px;
 }
 
+/* NAV (sticky + minimal editorial feel) */
 .nav {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 10;
   display: flex;
   justify-content: center;
   gap: 20px;
-  padding: 20px;
+  padding: 15px 20px;
   font-size: 12px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  border-bottom: 1px solid #eee;
 }
 
 .nav button {
   background: none;
   border: none;
   cursor: pointer;
-  opacity: 0.6;
+  opacity: 0.5;
+  letter-spacing: 1px;
 }
 
 .nav button:hover {
   opacity: 1;
 }
 
+/* GRID */
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  padding: 40px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  padding: 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  /* subtle entry animation */
+  animation: fadeIn 0.8s ease-in;
 }
 
+/* ITEM */
 .item {
   text-decoration: none;
   color: black;
+  display: block;
 }
 
+/* IMAGE */
 .item img {
   width: 100%;
-  aspect-ratio: 1/1;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
+  display: block;
   transition: transform 0.3s ease;
 }
 
@@ -61,7 +78,26 @@ body {
   transform: scale(1.03);
 }
 
+/* TITLE (hover emphasis instead of constant emphasis) */
 .title {
   margin-top: 10px;
-  font-size: 13px;
+  font-size: 12px;
+  opacity: 0.65;
+  transition: opacity 0.3s ease;
+}
+
+.item:hover .title {
+  opacity: 1;
+}
+
+/* FADE IN ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
